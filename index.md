@@ -9,4 +9,4 @@ title: Home Page
 
 ***
 
-- # [Figura Documentation](/docs)
+# [Figura Documentation](/docs)

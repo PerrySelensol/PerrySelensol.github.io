@@ -1,8 +1,11 @@
 ---
 layout: page
-title: "Figura Documentation"
+title:
 permalink: /docs
 ---
+
+<center style="font-size: 3em;">Figura 0.1.1 Documentation</center>
+&nbsp;
 
 ***
 
