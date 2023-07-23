@@ -53,3 +53,17 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+theme: minima
+
+header_pages:
+  - docs/docs_home.md
+
+author: PerrySelensol
+email: 
+
+title: Perry's Site
+description: 
+
+twitter_username: 
+github_username: PerrySelensol
