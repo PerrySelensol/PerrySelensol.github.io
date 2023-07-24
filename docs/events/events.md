@@ -5,6 +5,7 @@ permalink: /docs/events
 ---
 
 <center style="font-size: 3em;">Events</center>
+
 &nbsp;
 
 ***
@@ -23,7 +24,7 @@ end
 events.TICK:register(my_function, "my_event")
 ```
 
-Or you can register an anonymous function.
+Or as an anonymous function
 
 ```lua
 events.TICK:register(

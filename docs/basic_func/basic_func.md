@@ -5,6 +5,7 @@ permalink: /docs/basic_func
 ---
 
 <center style="font-size: 3em;">Basic Functions</center>
+
 &nbsp;
 
 ***

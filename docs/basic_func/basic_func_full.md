@@ -5,6 +5,7 @@ permalink: /docs/basic_func_full
 ---
 
 <center style="font-size: 3em;">Basic Functions</center>
+
 &nbsp;
 
 ***
@@ -13,7 +14,7 @@ permalink: /docs/basic_func_full
 
 `print(···)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A function that writes its arguments to chat. Each of the argument printed will be separated by a tab space.
+A function that writes its arguments to chat. Each of the argument printed will be separated by a tab space.
 
 Returns the string representation of all values.
 
@@ -30,9 +31,9 @@ print(print("This is really cursed but it does work"))
 
 <h1 id="listFiles" style="font-size: 2.5em;color:#00008B">listFiles</h1>
 
-`listFiles(String path, Boolean includeSubfolders)`
+`listFiles(String path, Boolean include_subfolders)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A function that returns a table with all script file names from the specified `path`. If no path is specified, it will fetch from the root folder. An optional second boolean argument `includeSubfolders` can be given to also list files inside subfolders.
+A function that returns a table with all script file names from the specified `path`. If no path is specified, it will fetch from the root folder. An optional second boolean argument `includeubfolders` can be given to also list files inside subfolders.
 
 ### Examples
 
@@ -59,7 +60,7 @@ printTable(listFiles("", true))
 
 `require(String scriptName, Function fallbackFunction)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The function runs `scriptName` file and return the value that the file returns or `true` if there isn't any (as a lua script file is essentially a one big function). If the script file has already run, then it only returns the value the file initially returned.
+The function runs `scriptName` file and return the value that the file returns or `true` if there isn't any (as a lua script file is essentially a one big function). If the script file has already run, then it only returns the value the file initially returned.
 If `scriptName` is invalid, then `fallbackFunction` will be called instead.
 
 ### Examples
@@ -79,7 +80,7 @@ Then run the following code
 ```lua
 local x = require("scripts.bar.foo",
     function() print("Task X failed successfully") end
-) --> x should now be "the string of foo"
+) --> x is now "the string of foo"
 
 print(x) --> does print "the string of foo"
 
@@ -97,7 +98,7 @@ print(y) --> nil
 
 `printJson(···)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takes Minecraft json strings arguments, and prints all of them to the chat formatted, without the lua print header. All of the arguments will be concatenated together. Returns the formatted string.
+Takes Minecraft json strings arguments, and prints all of them to the chat formatted, without the lua print header. All of the arguments will be concatenated together. Returns the formatted string.
 
 ### Examples
 
@@ -108,7 +109,7 @@ printJson(
 )
 ```
 
-The output should be <span style="color:red">Red</span><span style="color:blue">Blue</span><span style="color:green">Green</span>
+The output is <span style="color:red">Red</span><span style="color:blue">Blue</span><span style="color:green">Green</span>
 &nbsp;
 
 ***
@@ -117,7 +118,7 @@ The output should be <span style="color:red">Red</span><span style="color:blue">
 
 `printTable(Object object, Integer depth, Boolean silent)`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prints an object as a formatted string. The `object` can be a lua table or any object type that Figura mod adds (such as vectors, matrices and modelPart.) The optional `depth` argument can also be passed to also print deeper entries in a table or Figura objects, and the boolean `silent` can be passed to prevent formatted result from appearing in chat.
+Prints an object as a formatted string. The `object` can be a lua table or any object type that Figura mod adds (such as vectors, matrices and modelPart.) The optional `depth` argument can also be passed to also print deeper entries in a table or Figura objects, and the boolean `silent` can be passed to prevent formatted result from appearing in chat.
 
 The function always returns the formatted string.
 
