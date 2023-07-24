@@ -62,43 +62,16 @@ end
 
 ## List of all events in Figura
 
-- #### [ENTITY_INIT](/docs/events_full#ENTITY_INIT)
 
-- #### [TICK](/docs/events_full#TICK)
-
-- #### [WORLD_TICK](/docs/events_full#WORLD_TICK)
-
-- #### [RENDER](/docs/events_full#RENDER)
-
-- #### [POST_RENDER](/docs/events_full#POST_RENDER)
-
-- #### [WORLD_RENDER](/docs/events_full#WORLD_RENDER)
-
-- #### [POST_WORLD_RENDER](/docs/events_full#POST_WORLD_RENDER)
-
-- #### [CHAT_SEND_MESSAGE](/docs/events_full#CHAT_SEND_MESSAGE)
-
-- #### [CHAT_RECEIVE_MESSAGE](/docs/events_full#CHAT_RECEIVE_MESSAGE)
-
-- #### [SKULL_RENDER](/docs/events_full#SKULL_RENDER)
-
-- #### [MOUSE_SCROLL](/docs/events_full#MOUSE_SCROLL)
-
-- #### [MOUSE_MOVE](/docs/events_full#MOUSE_MOVE)
-
-- #### [MOUSE_PRESS](/docs/events_full#MOUSE_PRESS)
-
-- #### [KEY_PRESS](/docs/events_full#KEY_PRESS)
-
-- #### [CHAR_TYPED](/docs/events_full#CHAR_TYPED)
-
-- #### [USE_ITEM](/docs/events_full#USE_ITEM)
-
-- #### [ARROW_RENDER](/docs/events_full#ARROW_RENDER)
-
-- #### [ITEM_RENDER](/docs/events_full#ITEM_RENDER)
-
-- #### [ON_PLAY_SOUND](/docs/events_full#ON_PLAY_SOUND)
-
-- #### [RESOURCE_RELOAD](/docs/events_full#RESOURCE_RELOAD)
-
+| Rendering Related                                        | Client Inputs                                                  |
+|----------------------------------------------------------|----------------------------------------------------------------|
+| [ENTITY_INIT](/docs/events_full#ENTITY_INIT)             | [CHAT_SEND_MESSAGE](/docs/events_full#CHAT_SEND_MESSAGE)       |
+| [TICK](/docs/events_full#TICK)                           | [CHAT_RECEIVE_MESSAGE](/docs/events_full#CHAT_RECEIVE_MESSAGE) |
+| [WORLD_TICK](/docs/events_full#WORLD_TICK)               | [MOUSE_SCROLL](/docs/events_full#MOUSE_SCROLL)                 |
+| [RENDER](/docs/events_full#RENDER)                       | [MOUSE_MOVE](/docs/events_full#MOUSE_MOVE)                     |
+| [POST_RENDER](/docs/events_full#POST_RENDER)             | [MOUSE_PRESS](/docs/events_full#MOUSE_PRESS)                   |
+| [WORLD_RENDER](/docs/events_full#WORLD_RENDER)           | [KEY_PRESS](/docs/events_full#KEY_PRESS)                       |
+| [POST_WORLD_RENDER](/docs/events_full#POST_WORLD_RENDER) | [CHAR_TYPED](/docs/events_full#CHAR_TYPED)                     |
+| [SKULL_RENDER](/docs/events_full#SKULL_RENDER)           | [USE_ITEM](/docs/events_full#USE_ITEM)                         |
+| [ARROW_RENDER](/docs/events_full#ARROW_RENDER)           | [ON_PLAY_SOUND](/docs/events_full#ON_PLAY_SOUND)               |
+| [ITEM_RENDER](/docs/events_full#ITEM_RENDER)             | [RESOURCE_RELOAD](/docs/events_full#RESOURCE_RELOAD)           |
