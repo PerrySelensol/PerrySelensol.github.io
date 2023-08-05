@@ -6,7 +6,7 @@ permalink: /docs/events
 
 <center style="font-size: 3em;">Events</center>
 
-&nbsp;
+[< Documentation](/docs)
 
 ***
 
@@ -14,7 +14,7 @@ permalink: /docs/events
 
 Events are objects belonging to `events` table, and have an ability to call your functions when a certain event occurs.
 
-Functions can be registered to an event as follow
+Functions can be registered to an event as follow, using `TICK` event as an example.
 
 ```lua
 function my_function()
@@ -31,7 +31,7 @@ events.TICK:register(
     function()
         ... -- Your code here
     end,
-    "some_named_event"
+    "my_event"
 )
 ```
 
@@ -43,16 +43,16 @@ function events.tick()
 end
 ```
 
-Note that since the shortcut syntax is essentially the same as the regular registration, you can 'define' more than one of these functions unlike other usual functions (although it does look really cursed.)
+Note that since the shortcut syntax is essentially the same as the regular registration, you can 'define' more than one of these functions unlike other usual functions.
 
 ```lua
--- This is actually valid, and both will get called, but it's very cursed.
+-- This is valid, and both will get called.
 
-function events.use_item()
+function events.tick()
     ...
 end
 
-function events.use_item()
+function events.tick()
     ...
 end
 ```
@@ -60,8 +60,7 @@ end
 
 ***
 
-## List of all events in Figura
-
+<h2 id="event_list">List of all events in Figura</h2>
 
 | Rendering Related                                        | Client Inputs                                                  |
 |----------------------------------------------------------|----------------------------------------------------------------|

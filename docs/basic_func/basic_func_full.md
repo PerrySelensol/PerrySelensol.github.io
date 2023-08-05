@@ -6,7 +6,7 @@ permalink: /docs/basic_func_full
 
 <center style="font-size: 3em;">Basic Functions</center>
 
-&nbsp;
+[< Basic Functions](/docs/basic_func)
 
 ***
 
@@ -109,7 +109,10 @@ printJson(
 )
 ```
 
-The output is <span style="color:red">Red</span><span style="color:blue">Blue</span><span style="color:green">Green</span>
+The code outputs
+
+<code><span style="color:red">Red</span><span style="color:blue">Blue</span><span style="color:green">Green</span></code>
+
 &nbsp;
 
 ***

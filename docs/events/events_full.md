@@ -6,7 +6,7 @@ permalink: /docs/events_full
 
 <center style="font-size: 3em;">Events</center>
 
-&nbsp;
+[< Events](/docs)
 
 ***
 

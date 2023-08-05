@@ -6,20 +6,18 @@ permalink: /docs/basic_func
 
 <center style="font-size: 3em;">Basic Functions</center>
 
-&nbsp;
+[< Documentation](/docs)
 
 ***
 
 &nbsp;
 
-These are basic functions in Figura
+These are basic and simple functions in Figura. All but `require` are usually for debug purposes.
 
-- #### [print](/docs/basic_func_full#print)
 
-- #### [listFiles](/docs/basic_func_full#listFiles)
-
-- #### [require](/docs/basic_func_full#require)
-
-- #### [printJson](/docs/basic_func_full#printJson)
-
-- #### [printTable](/docs/basic_func_full#printTable)
+| Debugging Tools                                | Special &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+|------------------------------------------------|------------------------------------------|
+| [print](/docs/basic_func_full#print)           | [require](/docs/basic_func_full#require) |
+| [printJson](/docs/basic_func_full#printJson)   |                                          |
+| [printTable](/docs/basic_func_full#printTable) |                                          |
+| [listFiles](/docs/basic_func_full#listFiles)   |                                          |

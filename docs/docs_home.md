@@ -13,7 +13,7 @@ permalink: /docs
 
 - #### [Basic Functions](/docs/basic_func)
 
-- #### [Events](/docs/events)
+- #### [Events](/docs/events) &nbsp;(&#8202;[List](/docs/events#event_list)&#8202;)
 
 - #### [Pings](/docs/pings)
 
