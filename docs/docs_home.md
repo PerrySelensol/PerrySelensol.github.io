@@ -19,7 +19,7 @@ permalink: /docs
 
 ## Player Customizations
 
-- #### [Model](/docs/models)
+- #### [Model](/docs/models) &nbsp;(&#8202;[List](/docs/models#object_list)&#8202;)
 
 - #### [Vanilla Model](/docs/vanilla_model)
 

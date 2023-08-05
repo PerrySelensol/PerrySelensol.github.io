@@ -20,7 +20,7 @@ Thus, to get a model file called `player.bbmodel` and then get a group called `L
 
 <figure>
     <img src="/docs/images/player_outliner.png" height="250">
-    <figcaption>Outline of the example model file "player.bbmodel" viewed in BlockBench</figcaption>
+    <figcaption>Outline of the example model file "player.bbmodel" viewed in Blockbench</figcaption>
 </figure>
 
 ### Examples
@@ -42,12 +42,12 @@ L_Arm:setScale(0, 10, 0) -- Resize the group
 
 ***
 
-&nbsp;
+<h2 id="object_list">Types of objects in avatar models</h2>
 
-| BlockBench's Groups, Cubes and Meshes | Figura's Task Objects &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|---------------------------------------|------------------------------------------|
-| [ModelPart](/docs/models/model_part)  | [BlockTask](/docs/models/block_task)     |
-| [Vertex](/docs/models/vertex)         | [ItemTask](/docs/models/item_task)       |
-|                                       | [RenderTask](/docs/models/render_task)   |
-|                                       | [SpriteTask](/docs/models/sprite_task)   |
-|                                       | [TextureTask](/docs/models/texture_task) |
+| Blockbench's Groups, Cubes and Meshes      | Figura's Task Objects &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+|--------------------------------------------|------------------------------------------------|
+| [ModelPart](/docs/models/model_part/intro) | [BlockTask](/docs/models/block_task/intro)     |
+| [Vertex](/docs/models/vertex/intro)        | [ItemTask](/docs/models/item_task/intro)       |
+|                                            | [RenderTask](/docs/models/render_task/intro)   |
+|                                            | [SpriteTask](/docs/models/sprite_task/intro)   |
+|                                            | [TextureTask](/docs/models/texture_task/intro) |
