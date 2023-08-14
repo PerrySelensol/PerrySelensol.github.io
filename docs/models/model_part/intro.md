@@ -25,7 +25,9 @@ Thus, if a model file is called `player.bbmodel` which has hierachy as shown bel
 
 ***
 
-<h2 id="index">List of all fields and methods present in ModelPart object</h2>
+<h2 id="index">List of all fields and methods present in any ModelPart object</h2>
+
+Note : examples in each of these methods and fields will use the `player.bbmodel` example file above as a reference.
 
 | Getters                                                                       | Setters                                                                       |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
