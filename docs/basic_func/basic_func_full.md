@@ -12,18 +12,28 @@ permalink: /docs/basic_func_full
 
 <h1 id="print" style="font-size: 2.5em;color:#00008B">print</h1>
 
-`print(···)`
+```lua
+print_output = print(···)
+```
 
-A function that writes its arguments to chat. Each of the argument printed will be separated by a tab space.
+Writes arguments to Minecraft's chat. Each of the argument printed will be concatenated and separated by a tab space.
 
-Returns the string representation of all values.
+### Parameters
+
+Accepts any type of arguments.
+
+### Return Value
+
+Returns the *string* representation of all values.
 
 ### Examples
+
 ```lua
 print("Hello World!")
-print("A string", "Another string", 2023, "So many arguments")
 
-print(print("This is really cursed but it does work"))
+print("Multiple arguments example", true, 2023, function() end, nil)
+
+print(print("A valid example too!"))
 ```
 &nbsp;
 
@@ -31,13 +41,25 @@ print(print("This is really cursed but it does work"))
 
 <h1 id="listFiles" style="font-size: 2.5em;color:#00008B">listFiles</h1>
 
-`listFiles(String path, Boolean include_subfolders)`
+```lua
+fileTable = listFiles(path, include_subfolders)
+```
 
-A function that returns a table with all script file names from the specified `path`. If no path is specified, it will fetch from the root folder. An optional second boolean argument `includeubfolders` can be given to also list files inside subfolders.
+Returns a table with all script file names from the specified `path`.
+
+### Parameters
+
+A *string* `path` specifies which folder to start listing. If no path is specified, it will fetch from the root folder.
+
+An optional *boolean* `include_subfolders` to also list files inside subfolders.
+
+### Return Value
+
+Returns a *table* with all script file names from the specified `path`.
 
 ### Examples
 
-Assuming part of your script files are located inside `scripts/some_module` folder
+To list script files located in `scripts/some_module` folder, either with or without subfolders.
 
 ```lua
 local file_list = listFiles("scripts.some_module") -- Excluding Subfolders
@@ -58,37 +80,31 @@ printTable(listFiles("", true))
 
 <h1 id="require" style="font-size: 2.5em;color:#00008B">require</h1>
 
-`require(String scriptName, Function fallbackFunction)`
+```lua
+vararg = require(scriptName, fallbackFunction)
+```
 
-The function runs `scriptName` file and return the value that the file returns or `true` if there isn't any (as a lua script file is essentially a one big function). If the script file has already run, then it only returns the value the file initially returned.
-If `scriptName` is invalid, then `fallbackFunction` will be called instead.
+Runs a lua file if it hasn't already run yet.
+
+### Parameters
+
+A *string* `scriptName` specifies a path to a lua file.
+
+An optional *function* `fallbackFunction` to be called instead if `scriptName` is invalid.
+
+### Return Value
+
+Returns the value that the file returns or `true` if there isn't any. If the script file has already run, then it only returns the value the file initially returned.
 
 ### Examples
 
-Assuming there is a file called `foo` in `scripts/bar`
+To run a file called `foo` in `scripts/bar` then store its return value, and give out an error if the file doesn't exist.
 
 ```lua
--- This is a code in scripts/bar/foo
-
-print("foo has run")
-
-return "the string of foo"
-```
-
-Then run the following code
-
-```lua
-local x = require("scripts.bar.foo",
-    function() print("Task X failed successfully") end
-) --> x is now "the string of foo"
-
-print(x) --> does print "the string of foo"
-
-local y = require("scripts.bar.faz",
-    function() print("Task Y failed successfully") end
-) --> y is nil and "Task Y failed successfully" is printed
-
-print(y) --> nil
+local x = require(
+    "scripts.bar.foo",
+    function() error("No such file exists!") end
+)
 ```
 &nbsp;
 
@@ -96,9 +112,19 @@ print(y) --> nil
 
 <h1 id="printJson" style="font-size: 2.5em;color:#00008B">printJson</h1>
 
-`printJson(···)`
+```lua
+formattedOutput = printJson(···)
+```
 
-Takes Minecraft json strings arguments, and prints all of them to the chat formatted, without the lua print header. All of the arguments will be concatenated together. Returns the formatted string.
+Prints JSON-formatted strings. All of the arguments will be concatenated together.
+
+### Parameters
+
+Any number of `string` arguments in a form of JSON text.
+
+### Return Value
+
+Returns the formatted string.
 
 ### Examples
 
@@ -119,11 +145,23 @@ The code outputs
 
 <h1 id="printTable" style="font-size: 2.5em;color:#00008B">printTable</h1>
 
-`printTable(Object object, Integer depth, Boolean silent)`
+```lua
+formattedOutput = printTable(object, depth, silent)
+```
 
-Prints an object as a formatted string. The `object` can be a lua table or any object type that Figura mod adds (such as vectors, matrices and modelPart.) The optional `depth` argument can also be passed to also print deeper entries in a table or Figura objects, and the boolean `silent` can be passed to prevent formatted result from appearing in chat.
+Prints an object as a formatted string.
 
-The function always returns the formatted string.
+### Parameters
+
+A *table* or any object type that Figura mod adds (such as vectors, matrices and modelPart) to be printed.
+
+An optional *number* `depth` to also print deeper entries in a table or Figura objects.
+
+An optional *boolean* `silent` to prevent formatted result from appearing in chat.
+
+### Return Value
+
+Returns the formatted string.
 
 ### Examples
 

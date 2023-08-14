@@ -72,11 +72,11 @@ Functions registered to this event are called every frame, **before** the avatar
 
 The functions receive these parameters on being called:
 
-- A number `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
+- A *number* `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
 
-- A string `context` giving out context of the current RenderMode, with is a string with the name of the source of this render event.
+- A *string* `context` giving out context of the current RenderMode, with is a string with the name of the source of this render event.
 
-- A matrix `source_matrix` used to render the Avatar.
+- A *matrix* `source_matrix` used to render the Avatar.
 
 &nbsp;
 
@@ -96,11 +96,11 @@ Functions registered to this event are called every frame, **after** the avatar 
 
 The functions receive these parameters on being called:
 
-- A number `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
+- A *number* `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
 
-- A string `context` giving out context of the current RenderMode, with is a string with the name of the source of this render event.
+- A *string* `context` giving out context of the current RenderMode, with is a string with the name of the source of this render event.
 
-- A matrix `source_matrix` used to render the Avatar.
+- A *matrix* `source_matrix` used to render the Avatar.
 
 &nbsp;
 
@@ -118,7 +118,7 @@ events.WORLD_RENDER:register(
 
 Functions registered to this event are called every frame, **before** the world is rendered.
 
-On being called, the functions receive a number `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
+On being called, the functions receive a *number* `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
 
 &nbsp;
 
@@ -136,7 +136,7 @@ events.POST_WORLD_RENDER:register(
 
 Functions registered to this event are called every frame, **after** the world is rendered.
 
-On being called, the functions receive a number `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
+On being called, the functions receive a *number* `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
 
 &nbsp;
 
@@ -153,7 +153,11 @@ events.CHAT_SEND_MESSAGE:register(
 )
 ```
 
-Functions registered to this event will run every time you send a message in chat. A string `message` parameter is received which is the message entered in the chat box. The functions can be made to return a string which will be the message that is actually being sent instead of the message in chat box (if allowed in settings.) This means making any of the functions returning **nil** will prevent the message from being sent at all.
+Functions registered to this event will run every time you send a message in chat.
+
+A *string* `message` parameter is received which is the message entered in the chat box.
+
+The functions can be made to return a string which will be the message that is actually being sent instead of the message in chat box (if allowed in settings.) This means making any of the functions returning **nil** will prevent the message from being sent at all.
 
 &nbsp;
 
@@ -174,15 +178,15 @@ Functions registered to this event will run every time a message is received in 
 
 The functions receive these parameters on being called:
 
-- A string `message` which is the raw string of the received text.
+- A *string* `message` which is the raw string of the received text.
 
-- A string `json_message` which is a JSON string representation of the received text.
+- A *string* `json_message` which is a JSON string representation of the received text.
 
 The functions can be made to return two values:
 
-- A string which is a new message replacing the original received message. Returning **false** will prevent the message from being receieved in the chat screen
+- A *string* which is a new message replacing the original received message. Returning **false** will prevent the message from being receieved in the chat screen
 
-- A vector in RGB format which is used as background color for this message.
+- A *vector* in RGB format which is used as background color for this message.
 
 &nbsp;
 
@@ -203,15 +207,15 @@ Functions registered to this event will be called on all player heads placed in 
 
 The functions receive these parameters on being called:
 
-- A number `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
+- A *number* `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
 
-- A blockstate `block` when the head is rendered as a block.
+- A *blockstate* `block` when the head is rendered as a block.
 
-- An itemstack `item` when the head is rendered as an item.
+- An *itemstack* `item` when the head is rendered as an item.
 
-- An entity `entity` when the head is rendered from a entity.
+- An *entity* `entity` when the head is rendered from a entity.
 
-- A string `render_type` which is the type of rendering.
+- A *string* `render_type` which is the type of rendering.
 
 Making the function returning **true** will make the head not render at all
 
@@ -230,7 +234,11 @@ events.MOUSE_SCROLL:register(
 )
 ```
 
-Functions registered to this event run every time the mouse is scrolled. The functions receives a number `delta` which is the direction of the scroll. If any of the functions return **true**, it will cancel vanilla scrolling action.
+Functions registered to this event run every time the mouse is scrolled.
+
+The functions receive a *number* `delta` which is the direction of the scroll.
+
+If any of the functions return **true**, it will cancel vanilla scrolling action.
 
 &nbsp;
 
@@ -248,7 +256,10 @@ events.MOUSE_SCROLL:register(
 ```
 
 Functions registered to this event run every time the mouse is moved around.
-On being called, the functions receive two numbers: `delta_x` and `delta_y` which is the difference from the mouse position from the latest saved position. If any of the functions return **true**, its vanilla function will be cancelled and last mouse position will not be updated.
+
+On being called, the functions receive two *numbers*: `delta_x` and `delta_y` which is the difference from the mouse position from the latest saved position.
+
+If any of the functions return **true**, its vanilla function will be cancelled and last mouse position will not be updated.
 
 &nbsp;
 
@@ -269,11 +280,11 @@ Functions registered to this event run every time a mouse button is pressed.
 
 The functions receive three parameters on being called:
 
-- First number `button` which is the button pressed.
+- First *number* `button` which is the button pressed.
 
-- Second number `action` which is the action of the press (0 for release, 1 for press, 2 for hold.)
+- Second *number* `action` which is the action of the press (0 for release, 1 for press, 2 for hold.)
 
-- Third number `modifier` which is a number representing modifier key combinations being pressed (such as Shift or Alt keys.)
+- Third *number* `modifier` which is a number representing modifier key combinations being pressed (such as Shift or Alt keys.)
 
 If any of the functions return **true**, its vanilla function will be cancelled.
 
@@ -296,11 +307,11 @@ Functions registered to this event run every time a keyboard key is pressed.
 
 The functions receive three parameters on being called:
 
-- First number `button` which is the button pressed.
+- First *number* `button` which is the button pressed.
 
-- Second number `action` which is the action of the press (0 for release, 1 for press, 2 for hold.)
+- Second *number* `action` which is the action of the press (0 for release, 1 for press, 2 for hold.)
 
-- Third number `modifier` which is a number representing modifier key combinations being pressed (such as Shift or Alt keys.)
+- Third *number* `modifier` which is a number representing modifier key combinations being pressed (such as Shift or Alt keys.)
 
 If any of the functions return **true**, its vanilla function will be cancelled.
 
@@ -323,11 +334,11 @@ Functions registered event runs every time a character is inputted.
 
 The functions receive three parameters on being called:
 
-- A string `char` which is the button pressed.
+- A *string* `char` which is the button pressed.
 
-- A number `modifier` which is a number representing modifier key combinations being pressed (such as Shift or Alt keys.)
+- A *number* `modifier` which is a number representing modifier key combinations being pressed (such as Shift or Alt keys.)
 
-- A number `codepoint` which is the codepoint of the inputted character.
+- A *number* `codepoint` which is the codepoint of the inputted character.
 
 &nbsp;
 
@@ -349,11 +360,11 @@ Functions registered to this event run every time the entity uses an item.
 
 The functions receive three parameters on being called:
 
-- An itemstack `item` that is being used.
+- An *itemstack* `item` that is being used.
 
-- A string `action`
+- A *string* `action`
 
-- A number `particle_amount` that is amount of particles this item would produce.
+- A *number* `particle_amount` that is amount of particles this item would produce.
 
 If any of the functions return **true**, its vanilla function will be cancelled.
 
@@ -377,9 +388,9 @@ Functions registered to this event run for every arrow entity shot by the Avatar
 
 The functions receive two parameters on being called:
 
-- A number `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
+- A *number* `delta` from 0 to 1 indicating the proportion of the way the game is between ticks.
 
-- An entity `entity` representing the arrow entity itself.
+- An *entity* `entity` representing the arrow entity itself.
 
 If any of the functions return **true**, the arrow and its parts will not render.
 
@@ -402,17 +413,17 @@ Functions registered to this event run on all of your items that is being render
 
 The functions receive six parameters on being called:
 
-- An itemstack `item` representing item itself.
+- An *itemstack* `item` representing item itself.
 
-- A string `render_mode` that is the rendering mode of the item.
+- A *string* `render_mode` that is the rendering mode of the item.
 
-- A vector `pos` that is position transformation applied to the item.
+- A *vector* `pos` that is position transformation applied to the item.
 
-- A vector `rot` that is rotation transformation applied to the item.
+- A *vector* `rot` that is rotation transformation applied to the item.
 
-- A vector `scale` that is scale transformation applied to the item.
+- A *vector* `scale` that is scale transformation applied to the item.
 
-- A boolean `left_handed` indicating whether or not the item is rendered from the left hand.
+- A *boolean* `left_handed` indicating whether or not the item is rendered from the left hand.
 
 If a function returns a modelpart parented to item, the returned part will be rendered in place of the item.
 
@@ -434,19 +445,19 @@ Functions registered to this event are called every time a new sound is played.
 
 The functions receive these parameters on being called:
 
-- A string `sound_id` that is the ID of the sound.
+- A *string* `sound_id` that is the ID of the sound.
 
-- A vector `pos` that is its position in the world.
+- A *vector* `pos` that is its position in the world.
 
-- A number `volume` that is volume of the sound.
+- A *number* `volume` that is volume of the sound.
 
-- A number `pitch` that is pitch of the sound.
+- A *number* `pitch` that is pitch of the sound.
 
-- A boolean `is_looped` that is whether or not the sound is looped.
+- A *boolean* `is_looped` that is whether or not the sound is looped.
 
-- A string `category` that is category of the sound.
+- A *string* `category` that is category of the sound.
 
-- A string `path` that is the path of the sound.
+- A *string* `path` that is the path of the sound.
 
 
 &nbsp;

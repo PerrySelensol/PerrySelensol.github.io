@@ -18,7 +18,7 @@ This means functions that you manually run by yourself (such as those from your 
 
 Pings allow you to run a function on everyone's copy of your avatar and also send a piece of information to everyone who has your avatar loaded. Thus, they allow you to synchronize certain aspects of your avatar (such as outfits, animations played or poses.)
 
-More precisely, pings are functions that are inside the figura's `ping` table; thus you can create a ping function as follow:
+More simply, pings are functions that are inside the figura's `ping` table; thus a ping function can be created as follow:
 
 ```lua
 function pings.MyPing(arg)
