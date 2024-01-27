@@ -157,7 +157,9 @@ Functions registered to this event will run every time you send a message in cha
 
 A *string* `message` parameter is received which is the message entered in the chat box.
 
-The functions can be made to return a string which will be the message that is actually being sent instead of the message in chat box (if allowed in settings.) This means making any of the functions returning **nil** will prevent the message from being sent at all.
+The functions can be made to return a string which will be the message that is actually being sent instead of the message in chat box (if allowed in settings.) This means a function returning **nil** prevents the message from being sent at all.
+
+When multiple functions return their string at the same time, **the last function registered to this event** will get its string sent to chat.
 
 &nbsp;
 
@@ -187,6 +189,8 @@ The functions can be made to return two values:
 - A *string* which is a new message replacing the original received message. Returning **false** will prevent the message from being receieved in the chat screen
 
 - A *vector* in RGB format which is used as background color for this message.
+
+When multiple functions return their string at the same time, **the first function registered to this event** will get its return values used.
 
 &nbsp;
 

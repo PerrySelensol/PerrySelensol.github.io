@@ -26,7 +26,7 @@ function pings.MyPing(arg)
 end
 ```
 
-Beware that these functions can only have one argument, unlike regular functions.
+Beware that these functions can only have **one argument**, unlike regular functions.
 
 When this function is called on your avatar, the function will also be called on others' computer and the argument passed in will be sent to their computer as well.
 
