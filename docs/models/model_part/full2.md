@@ -1,14 +1,13 @@
 ---
 layout: page
-title:
-permalink: /docs/models/model_part/full2
+parent: ModelPart Objects
+title: All Part Appearence
+permalink: /figura-docs/models/model_part/full2
 ---
 
 <center style="font-size: 3em;">ModelPart Functions</center>
 
-<center style="font-size: 2em;">Section 2 - Appearence</center>
-
-[< ModelPart Objects](/docs/models/model_part/intro)
+<center style="font-size: 2em;">Appearence</center>
 
 ***
 
@@ -46,7 +45,7 @@ models.player.Root.Head:setVisible(true):setColor(0, 0.5, 1)
 PartVisible = models.player.Root.Head:getVisible()
 ```
 
-Gets the visibility of the model part. The values corresponds to the value passed in `setVisible()`, and by default is whether or not it is shown in Blockbench.
+Gets the visibility of the model part. The value corresponds to the value passed in `setVisible()`, and by default is whether or not it is shown in Blockbench.
 
 ### Return Value
 

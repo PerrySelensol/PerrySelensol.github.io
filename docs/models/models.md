@@ -1,16 +1,24 @@
 ---
 layout: page
-title:
-permalink: /docs/models
+parent: Figura Documentation
+title: Models
+permalink: /figura-docs/models
 ---
 
-<center style="font-size: 3em;">Model</center>
+<style> span.hidden {visibility: hidden;} </style>
 
-[< Documentation](/docs)
+<style>
+    table th:first-of-type {
+        width: 50%;
+    }
+    table th:nth-of-type(2) {
+        width: 50%;
+    }
+</style>
+
+<center style="font-size: 3em;">Models</center>
 
 ***
-
-&nbsp;
 
 An avatar model usually contains groups, cubes and meshes; all of these are `ModelPart` objects. However, scripts can add "tasks" which includes `BlockTask`, `ItemTask`, `RenderTask`, `SpriteTask` and `TextureTask` objects which are attached to a `ModelPart` object.
 
@@ -35,7 +43,7 @@ L_Arm = models.player.Root.LeftArm -- You can also do this for easier reference
 
 L_Arm:setRot(0, 0, 90) -- Rotate the group
 L_Arm:setPos(0, -2, 0) -- Move the group
-L_Arm:setScale(0, 10, 0) -- Resize the group
+L_Arm:setScale(1, 10, 1) -- Resize the group
 ```
 
 &nbsp;
@@ -44,10 +52,10 @@ L_Arm:setScale(0, 10, 0) -- Resize the group
 
 <h2 id="object_list">Types of objects in avatar models</h2>
 
-| Blockbench's Groups, Cubes and Meshes      | Figura's Task Objects &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-|--------------------------------------------|------------------------------------------------|
-| [ModelPart](/docs/models/model_part/intro) | [BlockTask](/docs/models/block_task/intro)     |
-| [Vertex](/docs/models/vertex/intro)        | [ItemTask](/docs/models/item_task/intro)       |
-|                                            | [RenderTask](/docs/models/render_task/intro)   |
-|                                            | [SpriteTask](/docs/models/sprite_task/intro)   |
-|                                            | [TextureTask](/docs/models/texture_task/intro) |
+| Blockbench's Groups, Cubes and Meshes        | Figura's Task Objects                            |
+| -------------------------------------------- | ------------------------------------------------ |
+| [ModelPart](/figura-docs/models/model_part)  | [BlockTask](/figura-docs/models/block_task)      |
+| [Vertex](/figura-docs/models/vertex)         | [ItemTask](/figura-docs/models/item_task)        |
+|                                              | [RenderTask](/figura-docs/models/render_task)    |
+|                                              | [SpriteTask](/figura-docs/models/sprite_task)    |
+|                                              | [TextureTask](/figura-docs/models/texture_task)  |

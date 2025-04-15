@@ -1,76 +1,36 @@
 ---
 layout: page
-title:
-permalink: /docs/events
+parent: Figura Documentation
+title: Events
+permalink: /figura-docs/events
+search_exclude: true
+has_toc: false
 ---
 
-<center style="font-size: 3em;">Events</center>
+<style> span.hidden {visibility: hidden;} </style>
 
-[< Documentation](/docs)
-
-***
-
-&nbsp;
-
-Events are objects belonging to `events` table, and have an ability to call your functions when a certain event occurs.
-
-Functions can be registered to an event as follow, using `TICK` event as an example.
-
-```lua
-function my_function()
-    ... -- Your code here
-end
-
-events.TICK:register(my_function, "my_event")
-```
-
-Or as an anonymous function
-
-```lua
-events.TICK:register(
-    function()
-        ... -- Your code here
-    end,
-    "my_event"
-)
-```
-
-A shortcut for this registration is to define an event as if it were a function itself.
-
-```lua
-function events.tick()
-    ... -- Your code here
-end
-```
-
-Note that since the shortcut syntax is essentially the same as the regular registration, you can 'define' more than one of these functions unlike other usual functions.
-
-```lua
--- This is valid, and both will get called.
-
-function events.tick()
-    ...
-end
-
-function events.tick()
-    ...
-end
-```
-&nbsp;
+<style>
+    table th:first-of-type {
+        width: 50%;
+    }
+    table th:nth-of-type(2) {
+        width: 50%;
+    }
+</style>
 
 ***
 
 <h2 id="event_list">List of all events in Figura</h2>
 
-| Rendering Related                                        | Client Inputs                                                  |
-|----------------------------------------------------------|----------------------------------------------------------------|
-| [ENTITY_INIT](/docs/events_full#ENTITY_INIT)             | [CHAT_SEND_MESSAGE](/docs/events_full#CHAT_SEND_MESSAGE)       |
-| [TICK](/docs/events_full#TICK)                           | [CHAT_RECEIVE_MESSAGE](/docs/events_full#CHAT_RECEIVE_MESSAGE) |
-| [WORLD_TICK](/docs/events_full#WORLD_TICK)               | [MOUSE_SCROLL](/docs/events_full#MOUSE_SCROLL)                 |
-| [RENDER](/docs/events_full#RENDER)                       | [MOUSE_MOVE](/docs/events_full#MOUSE_MOVE)                     |
-| [POST_RENDER](/docs/events_full#POST_RENDER)             | [MOUSE_PRESS](/docs/events_full#MOUSE_PRESS)                   |
-| [WORLD_RENDER](/docs/events_full#WORLD_RENDER)           | [KEY_PRESS](/docs/events_full#KEY_PRESS)                       |
-| [POST_WORLD_RENDER](/docs/events_full#POST_WORLD_RENDER) | [CHAR_TYPED](/docs/events_full#CHAR_TYPED)                     |
-| [SKULL_RENDER](/docs/events_full#SKULL_RENDER)           | [USE_ITEM](/docs/events_full#USE_ITEM)                         |
-| [ARROW_RENDER](/docs/events_full#ARROW_RENDER)           | [ON_PLAY_SOUND](/docs/events_full#ON_PLAY_SOUND)               |
-| [ITEM_RENDER](/docs/events_full#ITEM_RENDER)             | [RESOURCE_RELOAD](/docs/events_full#RESOURCE_RELOAD)           |
+| Rendering Events                                                | Client Inputs                                                         |
+| ----------------------------------------------------------      | --------------------------------------------------------------------- |
+| [ENTITY_INIT](/figura-docs/events/full#ENTITY_INIT)             | [CHAT_SEND_MESSAGE](/figura-docs/events/full#CHAT_SEND_MESSAGE)       |
+| [TICK](/figura-docs/events/full#TICK)                           | [CHAT_RECEIVE_MESSAGE](/figura-docs/events/full#CHAT_RECEIVE_MESSAGE) |
+| [WORLD_TICK](/figura-docs/events/full#WORLD_TICK)               | [MOUSE_SCROLL](/figura-docs/events/full#MOUSE_SCROLL)                 |
+| [RENDER](/figura-docs/events/full#RENDER)                       | [MOUSE_MOVE](/figura-docs/events/full#MOUSE_MOVE)                     |
+| [POST_RENDER](/figura-docs/events/full#POST_RENDER)             | [MOUSE_PRESS](/figura-docs/events/full#MOUSE_PRESS)                   |
+| [WORLD_RENDER](/figura-docs/events/full#WORLD_RENDER)           | [KEY_PRESS](/figura-docs/events/full#KEY_PRESS)                       |
+| [POST_WORLD_RENDER](/figura-docs/events/full#POST_WORLD_RENDER) | [CHAR_TYPED](/figura-docs/events/full#CHAR_TYPED)                     |
+| [SKULL_RENDER](/figura-docs/events/full#SKULL_RENDER)           | [USE_ITEM](/figura-docs/events/full#USE_ITEM)                         |
+| [ARROW_RENDER](/figura-docs/events/full#ARROW_RENDER)           | [ON_PLAY_SOUND](/figura-docs/events/full#ON_PLAY_SOUND)               |
+| [ITEM_RENDER](/figura-docs/events/full#ITEM_RENDER)             | [RESOURCE_RELOAD](/figura-docs/events/full#RESOURCE_RELOAD)           |

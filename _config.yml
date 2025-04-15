@@ -54,7 +54,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-theme: minima
+theme: just-the-docs
+search.heading_level: 1
 
 header_pages:
   - docs/docs_home.md
@@ -67,3 +68,11 @@ description:
 
 twitter_username: 
 github_username: PerrySelensol
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  note:
+    title: Note
+    color: purple

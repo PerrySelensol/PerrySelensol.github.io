@@ -1,19 +1,18 @@
 ---
 layout: page
-title:
-permalink: /docs/basic_func_full
+parent: Basic Functions
+title: All Basic Functions
+permalink: /figura-docs/basic_func/full
 ---
 
 <center style="font-size: 3em;">Basic Functions</center>
-
-[< Basic Functions](/docs/basic_func)
 
 ***
 
 <h1 id="print" style="font-size: 2.5em;color:#00008B">print</h1>
 
 ```lua
-print_output = print(···)
+print_output = print(...)
 ```
 
 Writes arguments to Minecraft's chat. Each of the argument printed will be concatenated and separated by a tab space.
@@ -49,9 +48,9 @@ Returns a table with all script file names from the specified `path`.
 
 ### Parameters
 
-A *string* `path` specifies which folder to start listing. If no path is specified, it will fetch from the root folder.
+- A *string* `path` specifies which folder to start listing. If no path is specified, it will fetch from the root folder.
 
-An optional *boolean* `include_subfolders` to also list files inside subfolders.
+- An optional *boolean* `include_subfolders` to also list files inside subfolders.
 
 ### Return Value
 
@@ -88,9 +87,9 @@ Runs a lua file if it hasn't already run yet.
 
 ### Parameters
 
-A *string* `scriptName` specifies a path to a lua file.
+- A *string* `scriptName` specifies a path to a lua file.
 
-An optional *function* `fallbackFunction` to be called instead if `scriptName` is invalid.
+- An optional *function* `fallbackFunction` to be called instead if `scriptName` is invalid.
 
 ### Return Value
 
@@ -113,7 +112,7 @@ local x = require(
 <h1 id="printJson" style="font-size: 2.5em;color:#00008B">printJson</h1>
 
 ```lua
-formattedOutput = printJson(···)
+formattedOutput = printJson(...)
 ```
 
 Prints JSON-formatted strings. All of the arguments will be concatenated together.
@@ -153,11 +152,11 @@ Prints an object as a formatted string.
 
 ### Parameters
 
-A *table* or any object type that Figura mod adds (such as vectors, matrices and modelPart) to be printed.
+- A *table* or any object type that Figura mod adds (such as vectors, matrices and modelPart) to be printed.
 
-An optional *number* `depth` to also print deeper entries in a table or Figura objects.
+- An optional *number* `depth` to also print deeper entries in a table or Figura objects.
 
-An optional *boolean* `silent` to prevent formatted result from appearing in chat.
+- An optional *boolean* `silent` to prevent formatted result from appearing in chat.
 
 ### Return Value
 

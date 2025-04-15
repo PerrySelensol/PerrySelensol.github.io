@@ -1,16 +1,13 @@
 ---
 layout: page
-title:
-permalink: /docs/pings
+parent: Figura Documentation
+title: Pings
+permalink: /figura-docs/pings
 ---
 
 <center style="font-size: 3em;">Pings</center>
 
-[< Documentation](/docs)
-
 ***
-
-&nbsp;
 
 Figura avatars are client-sided. That means when others see your avatar, they actually see a copy of your avatar on your player entity running its script on their own computer independently from your avatar running its own scripts on your computer.
 
@@ -21,14 +18,12 @@ Pings allow you to run a function on everyone's copy of your avatar and also sen
 More simply, pings are functions that are inside the figura's `ping` table; thus a ping function can be created as follow:
 
 ```lua
-function pings.MyPing(arg)
+function pings.MyPing(...)
     ...
 end
 ```
 
-Beware that these functions can only have **one argument**, unlike regular functions.
-
-When this function is called on your avatar, the function will also be called on others' computer and the argument passed in will be sent to their computer as well.
+When this function is called on your avatar, the function will also be called on others' computer and all arguments passed in will be sent to their computer as well.
 
 ### Examples
 

@@ -1,14 +1,13 @@
 ---
 layout: page
-title:
-permalink: /docs/models/model_part/full1
+parent: ModelPart Objects
+title: All Part Transformations
+permalink: /figura-docs/models/model_part/full1
 ---
 
 <center style="font-size: 3em;">ModelPart Functions</center>
 
-<center style="font-size: 2em;">Section 1 - Part Transformations</center>
-
-[< ModelPart Objects](/docs/models/model_part/intro)
+<center style="font-size: 2em;">Part Transformations</center>
 
 ***
 
@@ -24,7 +23,7 @@ Sets the position offset and its pivot for this part from its Blockbench positio
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the offset. Nil values are taken as 0.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the offset. Nil values are taken as 0.
 
 ### Return Value
 
@@ -54,7 +53,7 @@ Gets the position offset of the model part. The values corresponds to the value 
 
 ### Return Value
 
-Returns a *vector* which is the position offset of the model part.
+Returns a *vector3* which is the position offset of the model part.
 
 ### Examples
 
@@ -77,7 +76,7 @@ Sets the absolute rotation for this part in degrees. The rotation corresponds ex
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the absolute rotation. Nil values are taken as 0.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the absolute rotation. Nil values are taken as 0.
 
 ### Return Value
 
@@ -107,7 +106,7 @@ Gets the absolute rotation of the model part in degrees. The values corresponds 
 
 ### Return Value
 
-Returns a *vector* which is the absolute rotation of the model part.
+Returns a *vector3* which is the absolute rotation of the model part.
 
 ### Examples
 
@@ -130,7 +129,7 @@ Sets the scale of this part along its local X, Y and Z axis.
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the scale factors. Nil values are taken as 1.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the scale factors. Nil values are taken as 1.
 
 ### Return Value
 
@@ -160,7 +159,7 @@ Gets the scale factors of the part in its local X, Y and Z axis. The values corr
 
 ### Return Value
 
-Returns a *vector* which are the scale factors of the part in its local X, Y and Z axis, and are defaulted to `vec(1,1,1)`.
+Returns a *vector3* which are the scale factors of the part in its local X, Y and Z axis, and are defaulted to `vec(1,1,1)`.
 
 ### Examples
 
@@ -183,7 +182,7 @@ Sets the absolute pivot of this part, the numbers correspond exactly to "Pivot&n
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the pivot position. Nil values are taken as 0.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the pivot position. Nil values are taken as 0.
 
 ### Return Value
 
@@ -213,7 +212,7 @@ Gets the absolute pivot of this part. The values corresponds to the value passed
 
 ### Return Value
 
-Returns a *vector* which is the absolute pivot of this part, by default this would be the value of "Pivot&nbsp;Point" property in Blockbench.
+Returns a *vector3* which is the absolute pivot of this part, by default this would be the value of "Pivot&nbsp;Point" property in Blockbench.
 
 ### Examples
 
@@ -236,7 +235,7 @@ Sets the **offset** rotation for this part in degrees. The rotation adds to the 
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the rotation offset. Nil values are taken as 0.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the rotation offset. Nil values are taken as 0.
 
 ### Return Value
 
@@ -266,7 +265,7 @@ Gets the **offset** rotation of the model part in degrees. The values correspond
 
 ### Return Value
 
-Returns a *vector* which is the offset rotation of the model part.
+Returns a *vector3* which is the offset rotation of the model part.
 
 ### Examples
 
@@ -289,7 +288,7 @@ Sets the **offset** scale of this part along its local X, Y and Z axis. The scal
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the offset scale factors. Nil values are taken as 1.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the offset scale factors. Nil values are taken as 1.
 
 ### Return Value
 
@@ -319,7 +318,7 @@ Gets the **offset** scale factors of the part in its local X, Y and Z axis. The 
 
 ### Return Value
 
-Returns a *vector* which are the offset scale factors of the part in its local X, Y and Z axis, and are defaulted to `vec(1,1,1)`.
+Returns a *vector3* which are the offset scale factors of the part in its local X, Y and Z axis, and are defaulted to `vec(1,1,1)`.
 
 ### Examples
 
@@ -342,7 +341,7 @@ Sets the **offset** pivot of this part, the numbers adds to the value set by `se
 
 ### Parameters
 
-Either a *vector* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the pivot offset. Nil values are taken as 0.
+Either a *vector3* `xyz_vector` or 3 *numbers* `x`, `y`, `z` representing the pivot offset. Nil values are taken as 0.
 
 ### Return Value
 
@@ -372,7 +371,7 @@ Gets the offset pivot of this part. The values corresponds to the value passed i
 
 ### Return Value
 
-Returns a *vector* which is the offset pivot of this part.
+Returns a *vector3* which is the offset pivot of this part.
 
 ### Examples
 
@@ -393,7 +392,7 @@ Gets the true position of this part, which is the position after `setPos()` and 
 
 ### Return Value
 
-Returns a *vector* which is the true position of this part.
+Returns a *vector3* which is the true position of this part.
 
 ### Examples
 
@@ -414,7 +413,7 @@ Gets the true rotation of this part, which is the rotation after `setRot()`, `se
 
 ### Return Value
 
-Returns a *vector* which is the true rotation of this part.
+Returns a *vector3* which is the true rotation of this part.
 
 ### Examples
 
@@ -435,7 +434,7 @@ Gets the true scale of this part, which is the scale after `setScale()`, `setOff
 
 ### Return Value
 
-Returns a *vector* which is the true scale of this part.
+Returns a *vector3* which is the true scale of this part.
 
 ### Examples
 
@@ -456,7 +455,7 @@ Gets the true pivot of this part, which is the pivot after `setPivot()` and `set
 
 ### Return Value
 
-Returns a *vector* which is the true pivot of this part.
+Returns a *vector3* which is the true pivot of this part.
 
 ### Examples
 
@@ -477,7 +476,7 @@ Gets the position offset applied by all currently playing Blockbench animations.
 
 ### Return Value
 
-Returns a *vector* which is the sum of all playing Blockbench animation offset applied to this part.
+Returns a *vector3* which is the sum of all playing Blockbench animation offset applied to this part.
 
 ### Examples
 
@@ -498,7 +497,7 @@ Gets the rotation offset applied by all currently playing Blockbench animations.
 
 ### Return Value
 
-Returns a *vector* which is the sum of all playing Blockbench animation offset applied to this part.
+Returns a *vector3* which is the sum of all playing Blockbench animation offset applied to this part.
 
 ### Examples
 
@@ -519,7 +518,7 @@ Gets the scale offset applied by all currently playing Blockbench animations. Th
 
 ### Return Value
 
-Returns a *vector* which is the product of all playing Blockbench animation offset applied to this part.
+Returns a *vector3* which is the product of all playing Blockbench animation offset applied to this part.
 
 ### Examples
 

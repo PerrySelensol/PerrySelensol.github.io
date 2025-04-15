@@ -1,12 +1,12 @@
 ---
 layout: page
-title:
-permalink: /docs/events_full
+parent: Events
+title: All Events
+permalink: /figura-docs/events/full
+nav_order: 2
 ---
 
 <center style="font-size: 3em;">Events</center>
-
-[< Events](/docs)
 
 ***
 
@@ -76,7 +76,7 @@ The functions receive these parameters on being called:
 
 - A *string* `context` giving out context of the current RenderMode, with is a string with the name of the source of this render event.
 
-- A *matrix* `source_matrix` used to render the Avatar.
+- A *matrix4* `source_matrix` used to render the Avatar.
 
 &nbsp;
 
@@ -100,7 +100,7 @@ The functions receive these parameters on being called:
 
 - A *string* `context` giving out context of the current RenderMode, with is a string with the name of the source of this render event.
 
-- A *matrix* `source_matrix` used to render the Avatar.
+- A *matrix4* `source_matrix` used to render the Avatar.
 
 &nbsp;
 
@@ -188,7 +188,7 @@ The functions can be made to return two values:
 
 - A *string* which is a new message replacing the original received message. Returning **false** will prevent the message from being receieved in the chat screen
 
-- A *vector* in RGB format which is used as background color for this message.
+- A *vector4* in a normalized RGBA format which is used as background color for this message.
 
 When multiple functions return their string at the same time, **the first function registered to this event** will get its return values used.
 
@@ -421,9 +421,9 @@ The functions receive six parameters on being called:
 
 - A *string* `render_mode` that is the rendering mode of the item.
 
-- A *vector* `pos` that is position transformation applied to the item.
+- A *vector3* `pos` that is position transformation applied to the item.
 
-- A *vector* `rot` that is rotation transformation applied to the item.
+- A *vector3* `rot` that is rotation transformation applied to the item.
 
 - A *vector* `scale` that is scale transformation applied to the item.
 
@@ -451,7 +451,7 @@ The functions receive these parameters on being called:
 
 - A *string* `sound_id` that is the ID of the sound.
 
-- A *vector* `pos` that is its position in the world.
+- A *vector3* `pos` that is its position in the world.
 
 - A *number* `volume` that is volume of the sound.
 
